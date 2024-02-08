@@ -526,6 +526,7 @@ section {
 .footer-subscribe-btn:hover,
 .footer-subscribe-btn:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .footer-subscribe-icon {
@@ -675,7 +676,13 @@ section {
   min-height: 120px;
   resize: none;
   border-radius: 4px;
+  outline: none;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea:focus {
+  border-color: #4d5ae5;
 }
 
 .modal-textarea::placeholder {
@@ -708,7 +715,7 @@ section {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-right: 8px;
@@ -718,6 +725,7 @@ section {
 
 .modal-input-checkbox:checked + .modal-checkbox-text .modal-checkbox-span {
   background-color: #404bbf;
+  border: none;
   fill: #f4f4fd;
 }
 
@@ -735,6 +743,7 @@ section {
   background-color: #4d5ae5;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .modal-submit-btn:hover,
