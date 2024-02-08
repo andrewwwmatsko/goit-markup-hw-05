@@ -481,7 +481,7 @@ section {
   margin-left: 80px;
 }
 
-.footer-emal-input {
+.footer-email-input {
   color: #ffffff;
   width: 264px;
   height: 40px;
@@ -490,8 +490,14 @@ section {
   padding-left: 16px;
   border-radius: 4px;
   border: 1px solid #fff;
+  outline: none;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: transparent;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-email-input:focus {
+  border-color: #4d5ae5;
 }
 
 .footer-emal-input::placeholder {
