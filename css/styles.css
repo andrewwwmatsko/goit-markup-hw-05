@@ -477,16 +477,22 @@ section {
   fill: #f4f4fd;
 }
 
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
+
 .footer-subscribe {
   margin-left: 80px;
 }
 
 .footer-email-input {
   color: #ffffff;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
   width: 264px;
   height: 40px;
-  padding-top: 8px;
-  padding-bottom: 8px;
   padding-left: 16px;
   border-radius: 4px;
   border: 1px solid #fff;
@@ -496,34 +502,33 @@ section {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer-email-input::placeholder {
+  color: #ffffff;
+}
+
 .footer-email-input:focus {
   border-color: #4d5ae5;
 }
 
-.footer-emal-input::placeholder {
-  color: #fff;
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
-}
-
 .footer-subscribe-btn {
-  max-width: 165px;
-  color: #fff;
+  min-width: 165px;
+  height: 40px;
+  color: #ffffff;
   text-align: center;
   margin-left: 24px;
   border-radius: 4px;
   border: none;
   background-color: #4d5ae5;
   padding: 8px 24px;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Button Text*/
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -536,6 +541,7 @@ section {
 }
 
 .footer-subscribe-icon {
+  margin-left: 16px;
   flex-shrink: 0;
   fill: #ffffff;
 }
@@ -573,13 +579,14 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+  padding: 72px 24px 24px 24px;
   width: 408px;
   min-height: 584px;
-  padding-left: 24px;
-  padding-right: 24px;
   background-color: #fcfcfc;
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
 }
 .modal-close-btn {
   position: absolute;
@@ -620,11 +627,12 @@ section {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-top: 72px;
+  margin-bottom: 16px;
 }
 
 .modal-form {
-  margin-top: 16px;
+  display: inline-flex;
+  flex-direction: column;
 }
 
 .modal-input-group {
@@ -636,21 +644,24 @@ section {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .modal-input-container {
   position: relative;
-  margin-top: 4px;
 }
 
 .modal-input {
   width: 100%;
+  height: 40px;
   height: 58px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding-left: 38px;
-  outline: none;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
@@ -673,33 +684,31 @@ section {
 .modal-textarea-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 16px;
 }
 .modal-textarea {
+  color: rgba(46, 47, 66, 0.4);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  background-color: transparent;
+
   margin-top: 4px;
-  padding-top: 8px;
-  padding-left: 16px;
+  padding: 8px 16px;
   width: 100%;
   min-height: 120px;
   resize: none;
   border-radius: 4px;
-  outline: none;
+  outline: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea:focus {
   border-color: #4d5ae5;
 }
 
-.modal-textarea::placeholder {
-  color: rgba(46, 47, 66, 0.4);
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-}
-
 .modal-checkbox-group {
-  margin-top: 16px;
   margin-bottom: 24px;
   display: flex;
 }
@@ -720,13 +729,16 @@ section {
 .modal-checkbox-span {
   width: 16px;
   height: 16px;
+  border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-right: 8px;
   fill: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input-checkbox:checked + .modal-checkbox-text .modal-checkbox-span {
@@ -740,6 +752,12 @@ section {
 }
 
 .modal-submit-btn {
+  min-width: 169px;
+  height: 56px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
   display: block;
   margin: 0 auto;
   margin-bottom: 24px;

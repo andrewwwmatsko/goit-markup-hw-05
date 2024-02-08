@@ -582,9 +582,26 @@
 
         <div class="footer-subscribe">
           <p class="footer-title footer-social-media">Subscribe</p>
-          <form class="footer-form">
-            <div class="footer-input-group">
-              <input
+          <div class="footer-input-group">
+            <form class="footer-form">
+              <label class="footer-email-label">
+                <input
+                  type="email"
+                  name="footer-email"
+                  id=""
+                  class="footer-email-input"
+                  placeholder="E-mail"
+                />
+              </label>
+
+              <button type="submit" class="footer-subscribe-btn">
+                Subscribe
+                <svg class="footer-subscribe-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-subscribe-bnt-icon"></use>
+                </svg>
+              </button>
+
+              <!-- <input
                 type="text"
                 class="footer-email-input"
                 name="footer-email"
@@ -595,9 +612,9 @@
                 <svg class="footer-subscribe-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-subscribe-bnt-icon"></use>
                 </svg>
-              </button>
-            </div>
-          </form>
+              </button> -->
+            </form>
+          </div>
         </div>
       </div>
     </footer>
@@ -661,11 +678,11 @@
           </div>
 
           <div class="modal-textarea-container">
-            <label for="user-textarea" class="modal-label">Comment</label>
+            <label for="user-comment" class="modal-label">Comment</label>
             <textarea
               class="modal-textarea"
-              name="modal-textarea"
-              id="user-textarea"
+              name="user-comment"
+              id="user-comment"
               placeholder="Text input"
             ></textarea>
           </div>
@@ -673,12 +690,12 @@
           <div class="modal-checkbox-group">
             <input
               type="checkbox"
-              name="modal-checkbox"
-              id="terms"
+              name="user-privacy"
+              id="user-privacy"
               class="modal-input-checkbox visually-hidden"
               value="true"
             />
-            <label for="terms" class="modal-checkbox-text">
+            <label for="user-privacy" class="modal-checkbox-text">
               <span class="modal-checkbox-span">
                 <svg class="modal-check-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-check-mark"></use>
