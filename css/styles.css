@@ -482,6 +482,7 @@ section {
 }
 
 .footer-emal-input {
+  color: #ffffff;
   width: 264px;
   height: 40px;
   padding-top: 8px;
@@ -528,7 +529,12 @@ section {
 }
 
 .footer-subscribe-icon {
+  flex-shrink: 0;
   fill: #ffffff;
+}
+
+.footer-input-group {
+  display: flex;
 }
 
 /* ==================== */
